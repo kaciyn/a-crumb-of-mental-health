@@ -9,7 +9,7 @@ class CrumbApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          textTheme: GoogleFonts.montserratSubrayadaTextTheme(
+          textTheme: GoogleFonts.montserratTextTheme(
             Theme.of(context).textTheme,
           )),
       debugShowCheckedModeBanner: false,
@@ -70,8 +70,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        'HELLO?',
-                        style: Theme.of(context).textTheme.headline1,
+                        'HELLO',
+                        style: GoogleFonts.montserrat(
+                            fontSize: 60,
+                            color: Colors.white70,
+                            fontWeight: FontWeight.w200),
+//                        style: Theme.of(context).textTheme.headline,
                       ),
                       Text(
                         'How are you feeling?',
@@ -80,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             color: Colors.white70,
                             fontWeight: FontWeight.w200),
                       ),
-                      ListView()
+//                      ListView()
                     ]),
               ))),
     );
